@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rss 신문사 이동하기</title>
+    <style>
+        .news{width: 800px; height: auto; padding: 10px 20px; border: 5px solid #ddd; margin: 50px auto; position: relative;}
+        .news::before{content: 'News Sports'; width: 100px; height: 30px; background: #ddd; color: #222; position: absolute; top: -35px; left: 5px; text-align: center; padding-top: 5px; border-radius: 5px 5px 0 0;}
+        ul{list-style: none;}
+        li{line-height: 180%; border-bottom: 1px solid #ccc;}
+    </style>
+     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+     <script>
+         $(function(){
+             $.ajax({
+                url:"news.php",
+                dataType : 'xml',
+                success :function(data){
+                    let $items =$(data).find('item');
+                    if($items.length>0){
+                        $items=$items.slice(0,20);
+                        let $ulTag =$('<ul />');
+                        $.each($items, function(i, o){
+                            let $title = $(o).find('title').text();
+                            let $link = $(o).find('link').text();
+                            let $description = $(o).find('description').text();
+
+                            let $aTag = $('<a />').attr({'href':$link,"target":'_blank'}).text($title);
+                            let $liTag = $('<li />').append($aTag)
+
+                            $ulTag.append($liTag);
+                        })
+                        $('.news').append($ulTag);
+                    }
+                }
+             })
+         })
+     </script>
+</head>
+<body>
+    <div class="news">
+
+    </div>
+</body>
+</html>
