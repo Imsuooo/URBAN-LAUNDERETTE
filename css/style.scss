@@ -2872,3 +2872,12 @@ body{font-family: 'Montserrat','Noto Sans KR', 'sans-serif';}
         }
     }
 }
+@media screen and(max-width:442px){
+    #main{
+        #main_visual{
+            .main-top-slide-control{bottom: 20px;}
+            .swiper-controll{bottom: 73px;}
+            .main-top-slideArea{.main-top-slideArea-text{.text-list{padding-top: 30px;}}}
+        }
+    }
+}

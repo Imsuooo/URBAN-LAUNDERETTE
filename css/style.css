@@ -2870,4 +2870,15 @@ body {
     padding-top: 22px;
     font-size: 10px;
   }
+}
+@media screen and (max-width: 442px) {
+  #main #main_visual .main-top-slide-control {
+    bottom: 20px;
+  }
+  #main #main_visual .swiper-controll {
+    bottom: 73px;
+  }
+  #main #main_visual .main-top-slideArea .main-top-slideArea-text .text-list {
+    padding-top: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
