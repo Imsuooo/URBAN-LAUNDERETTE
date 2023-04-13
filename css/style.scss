@@ -1427,6 +1427,24 @@ body{font-family: 'Montserrat','Noto Sans KR', 'sans-serif';}
                     }
                 }
             }
+            .mobile_sns{
+                display: none;
+               flex-wrap: wrap;
+               justify-content: baseline;
+               padding-bottom: 30px;
+               a{
+                display: inline-block;
+                width: auto;
+                svg{
+                    margin-right: 15px;
+                    fill: rgba(255, 255, 255, .3);
+                    width: 20px;
+                    height: 20px;
+                    transition: .3s ease-in-out;
+                    &:hover{fill: $fc_fff;}
+                }
+               }
+            }
             .email{
                 float: right;
                 span{
@@ -2599,7 +2617,6 @@ body{font-family: 'Montserrat','Noto Sans KR', 'sans-serif';}
                 ul{
                     float: none;
                     padding-bottom: 90px;
-                    border-bottom: 1px solid rgba(255, 255, 255, .15);
                     li{a{padding: 21px 10px 0;}}
                 }
                 .email{
@@ -2884,12 +2901,22 @@ body{font-family: 'Montserrat','Noto Sans KR', 'sans-serif';}
     }
     #footer{
         .footer_container{
-            .footer_info{margin-top: 20px;}
+            .footer_info{
+                margin-top: 20px;
+                .sns{
+                    display: none;
+                }
+            }
             .contect{
                 ul{
                     flex-wrap: wrap;
                     gap: 5px;
+                    padding-bottom: 30px;
                     li{a{padding: 0;}}
+                }
+                .mobile_sns{
+                    display: flex;
+                    border-bottom: 1px solid rgba(255, 255, 255, .15);
                 }
             }
         }
