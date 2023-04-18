@@ -366,13 +366,11 @@ body{font-family: 'Montserrat','Noto Sans KR', 'sans-serif';}
             width: 100%;
             height: auto;
             .main-top-slideArea-img{
-                width: 100%;
-                    height: 100%;
-                position: absolute;
                 width: 1188px;
-                z-index: 100;
-                bottom: 0;
+                position: absolute;
                 right: 180px;
+                bottom: 0;
+                z-index: 100;
                 overflow: hidden;
                 .list{
                    position: relative;
